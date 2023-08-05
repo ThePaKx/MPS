@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MPS</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QChartView" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>40</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="showCTableWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <column>
+        <property name="text">
+         <string>分类数据</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>打开</string>
+    </property>
+    <addaction name="openSpec"/>
+    <addaction name="openReal"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>预处理</string>
+    </property>
+    <addaction name="actionSNV"/>
+    <addaction name="actionMSC"/>
+    <addaction name="actionFD"/>
+    <addaction name="actionSD"/>
+    <addaction name="actionNormalize"/>
+    <addaction name="actionAUG"/>
+   </widget>
+   <widget class="QMenu" name="loadModelMenu">
+    <property name="title">
+     <string>导入模型</string>
+    </property>
+    <addaction name="actionloadSVCModel"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>保存</string>
+    </property>
+    <addaction name="actionsave"/>
+    <addaction name="actionsaveAs"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="loadModelMenu"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="openSpec">
+   <property name="text">
+    <string>打开预测光谱</string>
+   </property>
+  </action>
+  <action name="openReal">
+   <property name="text">
+    <string>打开预测真实分类值 </string>
+   </property>
+  </action>
+  <action name="actionSNV">
+   <property name="text">
+    <string>SNV</string>
+   </property>
+  </action>
+  <action name="actionMSC">
+   <property name="text">
+    <string>MSC</string>
+   </property>
+  </action>
+  <action name="actionFD">
+   <property name="text">
+    <string>FD</string>
+   </property>
+  </action>
+  <action name="actionSD">
+   <property name="text">
+    <string>SD</string>
+   </property>
+  </action>
+  <action name="actionAUG">
+   <property name="text">
+    <string>AUG</string>
+   </property>
+  </action>
+  <action name="actionNormalize">
+   <property name="text">
+    <string>Normalize</string>
+   </property>
+  </action>
+  <action name="actionloadSVCModel">
+   <property name="text">
+    <string>加载SVM模型</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionsaveAs">
+   <property name="text">
+    <string>另存为</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QWidget</extends>
+   <header location="global">qchartview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
